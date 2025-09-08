@@ -1,12 +1,12 @@
-import { useState } from "react";
-import {
-  Modal,
-  TextInput,
-  NumberInput,
-  Select,
-  Button,
-  Stack,
-} from "@mantine/core";
+// import { useState } from "react";
+// import {
+//   Modal,
+//   TextInput,
+//   NumberInput,
+//   Select,
+//   Button,
+//   Stack,
+// } from "@mantine/core";
 
 type AddFoodModalProps = {
   opened: boolean;
@@ -20,58 +20,58 @@ type AddFoodModalProps = {
 };
 
 export default function AddFoodModal({}: AddFoodModalProps) {
-  const [name, setName] = useState<string>("");
-  const [nameError, setNameError] = useState(false);
+  // const [name, setName] = useState<string>("");
+  // const [nameError, setNameError] = useState(false);
 
-  const [price, setPrice] = useState<number | string>(0);
-  const [priceError, setPriceError] = useState(false);
+  // const [price, setPrice] = useState<number | string>(0);
+  // const [priceError, setPriceError] = useState(false);
 
-  const [quantity, setQuantity] = useState<number | string>(0);
-  const [quantityError , setQuantityError] = useState(false);
+  // const [quantity, setQuantity] = useState<number | string>(0);
+  // const [quantityError , setQuantityError] = useState(false);
 
-  const [category, setCategory] = useState<string | null>(null);
-  const [categoryError , setCategoryError] = useState(false);
+  // const [category, setCategory] = useState<string | null>(null);
+  // const [categoryError , setCategoryError] = useState(false);
 
-  const handleSubmit = () => {
-    if(name && price && quantity && category){
-      const newfood = {
-        name,
-        price,
-        quantity,
-        category,
-      };
-      onAdd(newfood);
-      setName("");
+  // const handleSubmit = () => {
+  //   if(name && price && quantity && category){
+  //     const newfood = {
+  //       name,
+  //       price,
+  //       quantity,
+  //       category,
+  //     };
+  //     onAdd(newfood);
+  //     setName("");
 
-      };
+  //     };
     
-  };
-  const nameOnchange = (event: React.ChangeEvent<HTMLInputElement>) =>{
-    setNameError(true);
-    setName(event.target.value);
-  };
-  const priceOnchange = (event: React.ChangeEvent<HTMLInputElement>) =>{
-    setPriceError(true);
-    if(price == 0)setPriceError(false);
-    setPrice(event.target.value) ;
-  };
-  const quantityOnchange = (event: React.ChangeEvent<HTMLInputElement>) =>{
-    setQuantityError(true);
-    if(quantity == 0)setQuantityError(false);
-    setQuantity(event.target.value);
-  }
-  const categoryOnchange = (event: React.ChangeEvent<HTMLInputElement>)=>{
-    setCategoryError(true);
-    setCategory(event.target.value);
-  }
-  const calTotal = () => {
-    let total = 0 ;
-    let Price = Number(price) ;
-    let Quantity = Number(quantity) ;
+  // };
+  // const nameOnchange = (event: React.ChangeEvent<HTMLInputElement>) =>{
+  //   setNameError(true);
+  //   setName(event.target.value);
+  // };
+  // const priceOnchange = (event: React.ChangeEvent<HTMLInputElement>) =>{
+  //   setPriceError(true);
+  //   if(price == 0)setPriceError(false);
+  //   setPrice(event.target.value) ;
+  // };
+  // const quantityOnchange = (event: React.ChangeEvent<HTMLInputElement>) =>{
+  //   setQuantityError(true);
+  //   if(quantity == 0)setQuantityError(false);
+  //   setQuantity(event.target.value);
+  // }
+  // const categoryOnchange = (event: React.ChangeEvent<HTMLInputElement>)=>{
+  //   setCategoryError(true);
+  //   setCategory(event.target.value);
+  // }
+  // const calTotal = () => {
+  //   let total = 0 ;
+  //   let Price = Number(price) ;
+  //   let Quantity = Number(quantity) ;
    
-    total += Price * Quantity;
-    return total ;
-  }
+  //   total += Price * Quantity;
+  //   return total ;
+  // }
   // หากต้องการแปง type string เป็น type number สามารถดูตัวอย่างนี้ได้
   // let val_number: number = Number("500.0");
   // console.log(val_number + 100); // 600.0
