@@ -20,6 +20,7 @@ export default function FoodTracker() {
       <Title order={2} mb="md">
         Food Tracker
       </Title>
+      
       <Button>Add Food Item</Button>
       {/* Type additional AddFoodModal here. */}
 
